@@ -2,16 +2,21 @@
 <h2>{{model.author}}</h2>
 <h2>{{model.description}}</h2>
 
-<!-- {{#if isEditing}}
+{{#if isEditing}}
   <form>
     <div class="form-group">
-      <label for="title">Title</label>
-      {{input id="title" class="form-control" value=title}}
+      <label for="asked">Ask your question: </label>
+      {{textarea id="asked" class="form-control" rows="2" value=asked}}
     </div>
 
     <div class="form-group">
-      <label for="body">Body</label>
-      {{textarea id="body" class="form-control" rows="15" value=body}}
+      <label for="description">Provide more details: </label>
+      {{textarea id="description" class="form-control" rows="5" value=description}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Name: </label>
+      {{input id="author" class="form-control" value=author}}
     </div>
 
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
@@ -24,7 +29,7 @@
   <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
 
-{{#each comments}}
+<!-- {{#each comments}}
   <p>{{text}}</p>
 {{/each}}
 

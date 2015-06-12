@@ -1,9 +1,9 @@
 <h1>Questions</h1>
+<br>
+<p>{{#link-to 'new-question' classNames="btn btn-primary"}}Ask a new Question{{/link-to}}</p>
+<br>
   <ul>
     {{#each}}
-      <li>{{#link-to 'question' this.id}}{{asked}}{{/link-to}}</li>
+      <li>{{#link-to 'question' this.id}}{{asked}}<br>from: {{author}}<br>{{/link-to}}</li>
     {{/each}}
   </ul>
-
-
-  <p>{{#link-to 'new-question' classNames="btn btn-primary"}}Ask a new Question{{/link-to}}</p>
