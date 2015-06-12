@@ -1,6 +1,4 @@
-<h2>{{model.asked}}</h2>
-<h2>{{model.author}}</h2>
-<h2>{{model.description}}</h2>
+
 
 {{#if isEditing}}
   <form>
@@ -23,16 +21,19 @@
 
   </form>
 {{else}}
-  <p>{{body}}</p>
+<h2>{{model.asked}}</h2>
+<h4>{{model.author}}</h4>
+<h4>{{model.description}}</h4>
 
-  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
-  <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+  <button class="btn btn-primary" {{action 'edit'}}>Edit this question</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete this question</button>
+  <!-- {{#link-to 'recent-answers' this.id class="btn btn-default"}}Show recent answers{{/link-to}} -->
+  {{#link-to 'new-answer' this.id class="btn btn-default"}}Provide a new answer{{/link-to}}
+
 {{/if}}
 
-<!-- {{#each comments}}
-  <p>{{text}}</p>
+{{#each answers as |answer|}}
+  <p>{{answer.text}}<br>{{answer.name}}<br></p>
 {{/each}}
 
-<p>{{#link-to 'new-comment' this.id class="btn btn-default"}}New Comment{{/link-to}}</p>
-
-{{outlet}} -->
+{{outlet}}

@@ -1,0 +1,11 @@
+<h2>Provide a New Answer</h2>
+
+  <form>
+    <div class="form-group">
+      {{textarea value=text id="text" class="form-control" placeholder="Enter your answer here."rows="5"}}
+      {{input value=name id="text" placeholder="Enter your name."class="form-control"}}
+
+    </div>
+
+    <button class="btn btn-primary" {{action 'save'}}>Add your comment</button>
+  </form>

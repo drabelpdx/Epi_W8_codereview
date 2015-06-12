@@ -1,5 +1,4 @@
 App.QuestionController = Ember.ObjectController.extend({
-  needs: ['question'],
   isEditing: false,
   actions: {
     edit: function() {
@@ -18,5 +17,7 @@ App.QuestionController = Ember.ObjectController.extend({
       }
     }
   }
+
+
 
 });
