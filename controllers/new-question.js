@@ -5,11 +5,11 @@ App.NewQuestionController = Ember.Controller.extend({
         asked: this.get('asked'),
         description: this.get('description'),
         author: this.get('author')
-
       });
+
       newQuestion.save();
+
       this.transitionToRoute('questions');
     }
-
   }
 });

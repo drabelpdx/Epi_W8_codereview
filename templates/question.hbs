@@ -48,7 +48,10 @@
 <h3>Answers</h3>
 
   {{#each answers as |answer|}}
-    <h4>{{answer.text}}</h4><h5>{{answer.name}}</h5><br>
+    <h4>{{answer.text}}</h4><h5>{{answer.name}}</h5>
+    <button class="btn btn-danger" {{action 'deleteAnswer'}}>Delete this Answer</button>
+    <br>
+<br>
   {{/each}}
 
   {{outlet}}
