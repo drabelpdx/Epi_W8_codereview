@@ -1,9 +1,25 @@
-<h1>Questions</h1>
-<br>
-<p>{{#link-to 'new-question' classNames="btn btn-primary"}}Ask a new Question{{/link-to}}</p>
-<br>
-  <ul>
-    {{#each}}
-      <li>{{#link-to 'question' this.id}}{{asked}}<br>from: {{author}}<br>{{/link-to}}</li>
-    {{/each}}
-  </ul>
+<div class="row-fluid">
+ <div class="col-md-4">
+   <table class='table'>
+     <thead>
+       <tr><th>Questions</th></tr>
+     </thead>
+
+     <tbody>
+       {{#each}}
+         <tr>
+           <td>
+             {{#link-to 'question' this}}{{asked}} <small class='muted'>  by:  {{author}}</small>{{/link-to}}
+           </td>
+         </tr>
+       {{/each}}
+     </tbody>
+   </table>
+ </div>
+
+ <div class="col-md-8">
+
+   {{outlet}}
+
+ </div>
+</div>
