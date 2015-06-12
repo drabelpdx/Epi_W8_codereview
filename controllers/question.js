@@ -1,3 +1,3 @@
-App.QuestionController = Ember.Controller.extend({
+App.QuestionController = Ember.ObjectController.extend({
 
 });

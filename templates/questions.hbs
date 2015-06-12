@@ -1,13 +1,9 @@
-<h2>Questions</h2>
-
-<br>
-<ul>
-  {{#each question in model questionController='question'}}
-    <li>{{question.question}}</li>
-  {{/each}}
-</ul>
+<h1>Questions</h1>
+  <ul>
+    {{#each}}
+      <li>{{#link-to 'question' this.id}}{{asked}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
 
 
-  <h3>Add a new question</h3>
-
-  <p>{{#link-to 'new-question' classNames="btn btn-primary"}}Ask a new question{{/link-to}}</p>
+  <p>{{#link-to 'new-question' classNames="btn btn-primary"}}Ask a new Question{{/link-to}}</p>

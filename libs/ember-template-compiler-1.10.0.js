@@ -601,7 +601,7 @@ define("ember-template-compiler/system/compile_options",
     */
     __exports__["default"] = function() {
       var disableComponentGeneration = true;
-      
+
       return {
         disableComponentGeneration: disableComponentGeneration,
 
@@ -2402,7 +2402,7 @@ define("htmlbars-syntax/handlebars/compiler/parser",
 
     var $0 = $$.length - 1;
     switch (yystate) {
-    case 1: return $$[$0-1]; 
+    case 1: return $$[$0-1];
     break;
     case 2:this.$ = new yy.Program($$[$0], null, {}, yy.locInfo(this._$));
     break;
@@ -2442,7 +2442,7 @@ define("htmlbars-syntax/handlebars/compiler/parser",
         program.chained = true;
 
         this.$ = { strip: $$[$0-2].strip, program: program, chain: true };
-      
+
     break;
     case 19:this.$ = $$[$0];
     break;
@@ -2486,7 +2486,7 @@ define("htmlbars-syntax/handlebars/compiler/parser",
     break;
     case 39:this.$ = yy.preparePath(false, $$[$0], this._$);
     break;
-    case 40: $$[$0-2].push({part: $$[$0], separator: $$[$0-1]}); this.$ = $$[$0-2]; 
+    case 40: $$[$0-2].push({part: $$[$0], separator: $$[$0-1]}); this.$ = $$[$0-2];
     break;
     case 41:this.$ = [{part: $$[$0]}];
     break;
@@ -2807,22 +2807,22 @@ define("htmlbars-syntax/handlebars/compiler/parser",
                                          this.begin("mu");
                                        }
                                        if(yy_.yytext) return 14;
-                                     
+
     break;
     case 1:return 14;
     break;
     case 2:
                                        this.popState();
                                        return 14;
-                                     
+
     break;
     case 3:
                                       yy_.yytext = yy_.yytext.substr(5, yy_.yyleng-9);
                                       this.popState();
                                       return 16;
-                                     
+
     break;
-    case 4: return 14; 
+    case 4: return 14;
     break;
     case 5:
       this.popState();
@@ -2833,13 +2833,13 @@ define("htmlbars-syntax/handlebars/compiler/parser",
     break;
     case 7:return 52;
     break;
-    case 8: return 17; 
+    case 8: return 17;
     break;
     case 9:
                                       this.popState();
                                       this.begin('raw');
                                       return 19;
-                                     
+
     break;
     case 10:return 42;
     break;
@@ -3123,7 +3123,7 @@ define("htmlbars-syntax/handlebars/compiler/whitespace-control",
       return mustache.strip;
     };
 
-    WhitespaceControl.prototype.PartialStatement = 
+    WhitespaceControl.prototype.PartialStatement =
         WhitespaceControl.prototype.CommentStatement = function(node) {
       var strip = node.strip || {};
       return {
@@ -3879,7 +3879,7 @@ define("htmlbars-syntax/utils",
     "use strict";
     var buildText = __dependency1__.buildText;
     var indexOfArray = __dependency2__.indexOfArray;
-    // Regex to validate the identifier for block parameters. 
+    // Regex to validate the identifier for block parameters.
     // Based on the ID validation regex in Handlebars.
 
     var ID_INVERSE_PATTERN = /[!"#%-,\.\/;->@\[-\^`\{-~]/;
