@@ -20,21 +20,21 @@ App.QuestionController = Ember.ObjectController.extend({
         this.get('model').destroyRecord();
         this.transitionToRoute('questions');
       }
-    },
-    deleteAnswer: function() {
-      if (confirm('Are you sure?')) {
-
-        var question = this.get('controllers.question.model');
-        var answers = this.get('model.answers');
-        var answer = answers.get('model.answer', {id: '55g0n'});
-
-        answers.removeObject(answer);
-        question.save();
-        answer.destroyRecord();
-
-        this.transitionToRoute('question', question.id);
-
-      }
     }
+    // deleteAnswer: function() {
+    //   if (confirm('Are you sure?')) {
+    //
+    //     var question = this.get('controllers.question.model');
+    //     var answers = this.get('model.answers');
+    //     var answer = answers.get('model.answer', {id: '55g0n'});
+    //
+    //     answers.removeObject(answer);
+    //     question.save();
+    //     answer.destroyRecord();
+    //
+    //     this.transitionToRoute('question', question.id);
+    //
+    //   }
+    // }
   }
 });
